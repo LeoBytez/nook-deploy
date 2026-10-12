@@ -1,0 +1,18 @@
+{
+  "name": "nook-deploy",
+  "version": "1.0.0",
+  "description": "Nala's Nook status page: a small Express app for practicing Git, GitHub, and deployment (CECS3214 Homework #11)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "author": "Leonardo J. Rivera Morales",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2"
+  }
+}
