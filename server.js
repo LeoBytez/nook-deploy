@@ -16,7 +16,10 @@ const config = {
 };
 
 // Navigation links shown at the top of every page
-const NAV = [{ href: '/', label: 'Home' }];
+const NAV = [
+  { href: '/', label: 'Home' },
+  { href: '/hours', label: 'Hours' },
+];
 
 const escapeHtml = (value) =>
   String(value)
@@ -78,6 +81,9 @@ app.get('/api/status', (req, res) => {
     messageSet: Boolean(process.env.NOOK_MESSAGE),
   });
 });
+
+// Opening hours page (feature/opening-hours)
+app.use(require('./routes/hours')(page));
 
 app.use((req, res) => {
   res.status(404).send(page('Not found', '<h1>Page not found</h1><p class="message">That page is not in the Nook.</p>'));
