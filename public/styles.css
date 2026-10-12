@@ -1,0 +1,44 @@
+:root {
+  --bg: #1b1410;
+  --surface: #241a15;
+  --border: #403126;
+  --text: #f2e9dc;
+  --text-dim: #b8a996;
+  --amber: #e8a94c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Nunito Sans', sans-serif;
+  line-height: 1.65;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+header { border-bottom: 1px solid var(--border); }
+.header-inner {
+  max-width: 900px; margin: 0 auto; padding: 16px 24px;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+}
+.logo { font-family: 'Fraunces', serif; font-size: 1.25rem; color: var(--amber); text-decoration: none; font-style: italic; }
+nav ul { list-style: none; display: flex; gap: 24px; }
+nav a { color: var(--text-dim); text-decoration: none; font-size: 0.9rem; }
+nav a:hover, nav a:focus-visible { color: var(--amber); }
+main { flex: 1; max-width: 900px; width: 100%; margin: 0 auto; padding: 56px 24px; }
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+}
+h1 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 4vw, 2.6rem); margin-bottom: 12px; }
+h1 em { color: var(--amber); }
+.message { color: var(--text-dim); margin-bottom: 32px; max-width: 60ch; }
+.panel { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px; }
+.panel h2 { font-family: 'Fraunces', serif; font-size: 1.1rem; margin-bottom: 14px; }
+dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 24px; font-size: 0.92rem; }
+dt { font-family: 'JetBrains Mono', monospace; color: var(--amber); font-size: 0.8rem; }
+dd { word-break: break-word; }
+table { width: 100%; border-collapse: collapse; }
+td { padding: 10px 0; border-bottom: 1px solid var(--border); }
+td:last-child { text-align: right; color: var(--text-dim); }
+footer { border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-dim); font-size: 0.85rem; }
